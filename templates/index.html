@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ML-Application</title>
+</head>
+<body>
+    <h1>Machine Learning Analysis Tool</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="file">Upload CSV Data:</label>
+        <input type="file" name="file" id="file" required>
+        <input type="submit" value="Upload">
+    </form>
+    {% if mse is not none %}
+        <h2>Analysis Results:</h2>
+        <p>Mean Squared Error: {{ mse }}</p>
+    {% endif %}
+</body>
+</html>
